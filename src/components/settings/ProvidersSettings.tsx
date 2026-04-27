@@ -55,7 +55,8 @@ import { subscribeHostEvent } from '@/lib/host-events';
 
 const inputClasses = 'h-[44px] rounded-xl font-mono text-[13px] bg-[#eeece3] dark:bg-muted border-black/10 dark:border-white/10 focus-visible:ring-2 focus-visible:ring-blue-500/50 focus-visible:border-blue-500 shadow-sm transition-all text-foreground placeholder:text-foreground/40';
 const labelClasses = 'text-[14px] text-foreground/80 font-bold';
-const SHUYAN_BASE_URL = 'https://platform.shuyanai.com/v1';
+const BASE_URL_PLACEHOLDER = '例如 https://api.example.com/v1';
+const MODEL_ID_PLACEHOLDER = '例如 glm-5 / deepseek-v4';
 type ArkMode = 'apikey' | 'codeplan';
 
 function getProtocolBaseUrlPlaceholder(
@@ -250,7 +251,7 @@ export function ProvidersSettings() {
               模型网关
             </h2>
             <p className="mt-1 text-[13px] font-medium text-foreground/70">
-              默认使用数言接口，也可以手动填写兼容 OpenAI 的 Base URL、API Key 和模型名称。
+              填写兼容 OpenAI 的 Base URL、API Key 和模型名称后，即可添加到模型列表。
             </p>
           </div>
           <Button data-testid="providers-add-button" onClick={() => setShowAddDialog(true)} className="bajo-button-gradient rounded-md px-5 h-9 shadow-none font-semibold text-[13px]">
@@ -933,7 +934,7 @@ function AddProviderDialog({
   const [selectedType, setSelectedType] = useState<ProviderType | null>('shuyan');
   const [name, setName] = useState('BajoSeek');
   const [apiKey, setApiKey] = useState('');
-  const [baseUrl, setBaseUrl] = useState(SHUYAN_BASE_URL);
+  const [baseUrl, setBaseUrl] = useState('');
   const [modelId, setModelId] = useState('');
   const [apiProtocol, setApiProtocol] = useState<ProviderAccount['apiProtocol']>('openai-completions');
   const [showAdvancedConfig, setShowAdvancedConfig] = useState(false);
@@ -1298,7 +1299,7 @@ function AddProviderDialog({
               <div className="rounded-2xl bg-white dark:bg-card border border-black/5 dark:border-white/5 shadow-sm p-4">
                 <p className="font-semibold text-[15px]">BajoSeek 模型接口</p>
                 <p className="text-[13px] text-muted-foreground mt-1">
-                  默认使用书言网关，也可以改成其它 OpenAI 兼容 Base URL。
+                  填写你的模型服务 Base URL、API Key 和模型名称，验证通过后即可使用。
                 </p>
               </div>
 
@@ -1390,7 +1391,7 @@ function AddProviderDialog({
                     <Input
                       data-testid="add-provider-base-url-input"
                       id="baseUrl"
-                      placeholder={SHUYAN_BASE_URL}
+                      placeholder={BASE_URL_PLACEHOLDER}
                       value={baseUrl}
                       onChange={(e) => {
                         setBaseUrl(e.target.value);
@@ -1408,7 +1409,7 @@ function AddProviderDialog({
                     <Input
                       data-testid="add-provider-model-id-input"
                       id="modelId"
-                      placeholder="例如 bajoseek"
+                      placeholder={MODEL_ID_PLACEHOLDER}
                       value={modelId}
                       onChange={(e) => {
                         setModelId(e.target.value);

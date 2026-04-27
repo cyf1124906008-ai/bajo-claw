@@ -10,7 +10,7 @@
 
 2. 下载最新版安装包：
 
-   `bajo-claw-1.0.5-win-x64.exe`
+   `bajo-claw-1.0.6-win-x64.exe`
 
 3. 双击安装包。
 4. 根据安装向导完成安装。
@@ -34,9 +34,9 @@
 3. 填写以下内容：
 
    ```text
-   基础 URL：https://platform.shuyanai.com/v1
+   基础 URL：填写你的 OpenAI 兼容接口地址，例如 https://api.example.com/v1
    API Key：填写你的密钥
-   模型 ID：填写模型名称，例如 glm-5
+   模型 ID：填写模型名称，例如 glm-5 / deepseek-v4
    ```
 
 4. 点击「验证」。
@@ -97,7 +97,7 @@ https://clawd.org.cn/
 
 一般是模型配置问题。请检查：
 
-- 基础 URL 是否为 `https://platform.shuyanai.com/v1`
+- 基础 URL 是否填写正确，常见 OpenAI 兼容接口通常需要带 `/v1`
 - API Key 是否正确
 - API Key 是否有额度
 - 模型 ID 是否填写正确

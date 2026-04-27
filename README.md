@@ -6,7 +6,7 @@ BajoClaw 是为 BajoSeek 场景定制的 OpenClaw 桌面端应用。用户下载
 
 请到 GitHub Releases 下载最新版 Windows 安装包：
 
-- 安装包：`bajo-claw-1.0.5-win-x64.exe`
+- 安装包：`bajo-claw-1.0.6-win-x64.exe`
 - 系统：Windows 10 / Windows 11，64 位
 - 推荐安装方式：双击安装包，按提示完成安装
 
@@ -27,13 +27,13 @@ https://github.com/cyf1124906008-ai/bajo-claw/releases
 
 ## 快速开始
 
-1. 下载并安装 `bajo-claw-1.0.5-win-x64.exe`。
+1. 下载并安装 `bajo-claw-1.0.6-win-x64.exe`。
 2. 打开 BajoClaw。
 3. 进入「模型」页面，点击「添加提供商」。
 4. 填写模型信息：
-   - 基础 URL：默认 `https://platform.shuyanai.com/v1`
+   - 基础 URL：填写你的 OpenAI 兼容接口地址，例如 `https://api.example.com/v1`
    - API Key：填写你的模型服务密钥
-   - 模型 ID：例如 `glm-5`
+   - 模型 ID：例如 `glm-5` / `deepseek-v4`
 5. 点击验证，验证通过后保存。
 6. 进入「频道」页面，配置 BajoSeek Bot ID 和 Token。
 7. 保存后即可通过 BajoSeek Bot 使用 OpenClaw 能力。
@@ -73,7 +73,7 @@ wss://ws.bajoseek.com
 
 请检查「模型」页面：
 
-- 基础 URL 是否带 `/v1`，默认应为 `https://platform.shuyanai.com/v1`
+- 基础 URL 是否填写正确，常见 OpenAI 兼容接口通常需要带 `/v1`
 - API Key 是否正确
 - 模型 ID 是否填写正确
 - API Key 是否有额度

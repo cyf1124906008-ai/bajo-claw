@@ -1,6 +1,6 @@
 # BajoClaw 发布说明
 
-## v1.0.5
+## v1.0.6
 
 这是 BajoClaw 面向 BajoSeek 使用场景的 Windows 首个交付版本。
 
@@ -15,7 +15,7 @@
 - 频道页只保留 BajoSeek 连接入口
 - 默认 WebSocket 地址为 `wss://ws.bajoseek.com`
 - 模型配置简化为基础 URL、API Key、模型 ID
-- 默认模型基础 URL 为 `https://platform.shuyanai.com/v1`
+- 模型基础 URL 由用户在应用内自行填写
 - 添加「获取 API 链接」入口
 - 技能页完成中文化，并预装常用本地技能
 - UI 改为黄、蓝、红为主的 BajoSeek 风格
@@ -23,9 +23,9 @@
 
 ### 下载文件
 
-- `bajo-claw-1.0.5-win-x64.exe`：Windows 64 位安装包
-- `bajo-claw-1.0.5-win-x64.exe.blockmap`：自动更新差分文件
+- `bajo-claw-1.0.6-win-x64.exe`：Windows 64 位安装包
+- `bajo-claw-1.0.6-win-x64.exe.blockmap`：自动更新差分文件
 
 ### 安装说明
 
-普通用户只需要下载并运行 `bajo-claw-1.0.5-win-x64.exe`。安装后打开应用，填写模型 API Key、模型 ID，再配置 BajoSeek Bot ID 和 Token 即可使用。
+普通用户只需要下载并运行 `bajo-claw-1.0.6-win-x64.exe`。安装后打开应用，填写模型 API Key、模型 ID，再配置 BajoSeek Bot ID 和 Token 即可使用。
