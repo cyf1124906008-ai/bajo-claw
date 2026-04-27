@@ -1,7 +1,7 @@
 {
   "steps": {
     "welcome": {
-      "title": "Welcome to Bajo Claw",
+      "title": "Welcome to BajaClaw",
       "description": "Your AI assistant is ready to be configured"
     },
     "runtime": {
@@ -22,12 +22,12 @@
     },
     "complete": {
       "title": "All Set!",
-      "description": "Bajo Claw is ready to use"
+      "description": "BajaClaw is ready to use"
     }
   },
   "welcome": {
-    "title": "Welcome to Bajo Claw",
-    "description": "Bajo Claw bundles OpenClaw and the BajaSeek connection so users can configure a model and Bot after installation.",
+    "title": "Welcome to BajaClaw",
+    "description": "BajaClaw bundles OpenClaw and the BajaSeek connection so users can configure a model and Bot after installation.",
     "features": {
       "noCommand": "Zero command-line required",
       "modernUI": "Modern, beautiful interface",
@@ -113,7 +113,7 @@
   },
   "complete": {
     "title": "Setup Complete!",
-    "subtitle": "Bajo Claw is ready. Configure the API key and model name on the Models page, then connect the BajaSeek Bot on the Channels page.",
+    "subtitle": "BajaClaw is ready. Configure the API key and model name on the Models page, then connect the BajaSeek Bot on the Channels page.",
     "provider": "AI Provider",
     "components": "Bundled Components",
     "componentsReady": "OpenClaw / BajaSeek bundled",

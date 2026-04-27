@@ -63,7 +63,7 @@ function resolveSkillSourceLabel(skill: Skill, t: TFunction<'skills'>): string {
   }
   if (source === 'openclaw-bundled') return t('source.badge.bundled', { defaultValue: 'Bundled' });
   if (source === 'openclaw-managed') return t('source.badge.managed', { defaultValue: 'Managed' });
-  if (source === 'bajo-local') return t('source.badge.bajoLocal', { defaultValue: 'Bajo 内置' });
+  if (source === 'bajo-local') return t('source.badge.bajoLocal', { defaultValue: 'Baja 内置' });
   if (source === 'clawx-preinstalled') return t('source.badge.preinstalled', { defaultValue: '内置' });
   if (source === 'openclaw-workspace') return t('source.badge.workspace', { defaultValue: 'Workspace' });
   if (source === 'openclaw-extra') return t('source.badge.extra', { defaultValue: 'Extra dirs' });
@@ -83,7 +83,7 @@ const BAJO_NO_KEY_SKILL_SLUGS = new Set([
   'fund-etf-analysis',
 ]);
 
-function isBajoManagedSkill(skill: Skill): boolean {
+function isBajaManagedSkill(skill: Skill): boolean {
   const source = (skill.source || '').trim().toLowerCase();
   const slug = (skill.slug || skill.id || '').trim().toLowerCase();
   return skill.isBundled
@@ -220,8 +220,8 @@ function SkillDetailDialog({ skill, isOpen, onClose, onToggle, onUninstall, onOp
 
   if (!skill) return null;
   const displaySkill = getLocalizedSkill(skill);
-  const showAdvancedConfig = !skill.isCore && (!isBajoManagedSkill(skill) || hasSavedSkillConfig(skill));
-  const showExternalLinks = Boolean(skill.slug && !skill.isBundled && !skill.isCore && !isBajoManagedSkill(skill));
+  const showAdvancedConfig = !skill.isCore && (!isBajaManagedSkill(skill) || hasSavedSkillConfig(skill));
+  const showExternalLinks = Boolean(skill.slug && !skill.isBundled && !skill.isCore && !isBajaManagedSkill(skill));
 
   return (
     <Sheet open={isOpen} onOpenChange={(open) => !open && onClose()}>

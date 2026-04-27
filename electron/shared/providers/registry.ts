@@ -107,7 +107,7 @@ export const PROVIDER_DEFINITIONS: ProviderDefinition[] = [
       apiKeyEnv: 'OPENROUTER_API_KEY',
       headers: {
         'HTTP-Referer': 'https://claw-x.com',
-        'X-Title': 'Bajo Claw',
+        'X-Title': 'BajaClaw',
       },
     },
   },

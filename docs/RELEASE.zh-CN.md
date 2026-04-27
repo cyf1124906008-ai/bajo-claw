@@ -1,12 +1,12 @@
-# Bajo Claw 发布说明
+# BajaClaw 发布说明
 
-## v1.0.1
+## v1.0.2
 
-这是 Bajo Claw 面向 BajaSeek 使用场景的 Windows 首个交付版本。
+这是 BajaClaw 面向 BajaSeek 使用场景的 Windows 首个交付版本。
 
 ### 主要内容
 
-- 桌面应用名称调整为 `Bajo Claw`
+- 桌面应用名称调整为 `BajaClaw`
 - 用户可见品牌统一为 `BajaSeek`
 - 内置 OpenClaw 主体运行环境
 - 内置 Windows 版 Node.js 运行时
@@ -22,9 +22,9 @@
 
 ### 下载文件
 
-- `bajo-claw-1.0.1-win-x64.exe`：Windows 64 位安装包
-- `bajo-claw-1.0.1-win-x64.exe.blockmap`：自动更新差分文件
+- `baja-claw-1.0.2-win-x64.exe`：Windows 64 位安装包
+- `baja-claw-1.0.2-win-x64.exe.blockmap`：自动更新差分文件
 
 ### 安装说明
 
-普通用户只需要下载并运行 `bajo-claw-1.0.1-win-x64.exe`。安装后打开应用，填写模型 API Key、模型 ID，再配置 BajaSeek Bot ID 和 Token 即可使用。
+普通用户只需要下载并运行 `baja-claw-1.0.2-win-x64.exe`。安装后打开应用，填写模型 API Key、模型 ID，再配置 BajaSeek Bot ID 和 Token 即可使用。

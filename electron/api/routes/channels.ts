@@ -16,7 +16,7 @@ import {
   setChannelEnabled,
   validateChannelConfig,
   validateChannelCredentials,
-  isBajoSupportedChannelType,
+  isBajaSupportedChannelType,
 } from '../../utils/channel-config';
 import {
   assignChannelAccountToAgent,
@@ -95,13 +95,13 @@ function resolveStoredChannelType(channelType: string): string {
 }
 
 function rejectUnsupportedChannel(res: ServerResponse, channelType: string): boolean {
-  if (isBajoSupportedChannelType(channelType)) {
+  if (isBajaSupportedChannelType(channelType)) {
     return false;
   }
 
   sendJson(res, 400, {
     success: false,
-    error: `Channel "${channelType}" is not supported by Bajo Claw. Supported channels: BajaSeek, WeChat.`,
+    error: `Channel "${channelType}" is not supported by BajaClaw. Supported channels: BajaSeek, WeChat.`,
   });
   return true;
 }
@@ -592,7 +592,7 @@ export async function buildChannelAccountsView(
   const channels: ChannelAccountsView[] = [];
   for (const rawChannelType of channelTypes) {
     const uiChannelType = toUiChannelType(rawChannelType);
-    if (!isBajoSupportedChannelType(uiChannelType)) {
+    if (!isBajaSupportedChannelType(uiChannelType)) {
       continue;
     }
     const channelAccountsFromConfig = configuredAccounts[rawChannelType]?.accountIds ?? [];

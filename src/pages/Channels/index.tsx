@@ -14,7 +14,7 @@ import {
   CHANNEL_NAMES,
   CHANNEL_META,
   getPrimaryChannels,
-  isBajoSupportedChannel,
+  isBajaSupportedChannel,
   type ChannelType,
 } from '@/types/channel';
 import { usesPluginManagedQrAccounts } from '@/lib/channel-alias';
@@ -156,7 +156,7 @@ export function Channels() {
   const hasLoadedAgentsRef = useRef(false);
 
   const displayedChannelTypes = getPrimaryChannels().filter((type) => type === 'bajoseek');
-  const visibleChannelGroups = channelGroups.filter((group) => group.channelType === 'bajoseek' && isBajoSupportedChannel(group.channelType));
+  const visibleChannelGroups = channelGroups.filter((group) => group.channelType === 'bajoseek' && isBajaSupportedChannel(group.channelType));
   const visibleAgents = agents;
   const hasStableValue = visibleChannelGroups.length > 0 || visibleAgents.length > 0;
   const isUsingStableValue = hasStableValue && (loading || Boolean(error));
@@ -523,7 +523,7 @@ export function Channels() {
               BajaSeek 连接中心
             </h1>
             <p className="max-w-2xl text-[14px] font-medium leading-6 text-foreground/70">
-              绑定 BajaSeek 机器人账号后，Bajo Claw 会通过内置 OpenClaw 插件接收消息、调用模型和技能，并把回复发回用户。
+              绑定 BajaSeek 机器人账号后，BajaClaw 会通过内置 OpenClaw 插件接收消息、调用模型和技能，并把回复发回用户。
             </p>
           </div>
 

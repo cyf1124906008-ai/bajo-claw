@@ -102,7 +102,7 @@
     "envVar": "Environment Variable: {{var}}",
     "docsTitle": "Setup Guide",
     "docsSubtitle": "Built-in notes. No external page will be opened.",
-    "docsIntro": "Fill in the fields below and save. Bajo Claw will restart the gateway automatically so the channel can take effect.",
+    "docsIntro": "Fill in the fields below and save. BajaClaw will restart the gateway automatically so the channel can take effect.",
     "copyDocs": "Copy Guide",
     "channelDescription": "Channel description",
     "connectionMethod": "Connection method",
@@ -138,8 +138,8 @@
   },
   "meta": {
     "bajoseek": {
-      "description": "Connect BajaSeek through the BajaSeek WebSocket plugin so Bajo Claw can receive and reply to BajaSeek messages.",
-      "docsUrl": "bajo-claw://docs/bajoseek",
+      "description": "Connect BajaSeek through the BajaSeek WebSocket plugin so BajaClaw can receive and reply to BajaSeek messages.",
+      "docsUrl": "baja-claw://docs/bajoseek",
       "fields": {
         "botId": {
           "label": "Bot ID",

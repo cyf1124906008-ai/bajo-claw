@@ -1,22 +1,22 @@
-# Bajo Claw
+# BajaClaw
 
-Bajo Claw 是为 BajaSeek 场景定制的 OpenClaw 桌面端应用。用户下载安装后，不需要自己准备 Node.js、Git 或 OpenClaw 环境，只需要在应用里填写模型 API Key 和模型名称，就可以通过 BajaSeek Bot 连接使用。
+BajaClaw 是为 BajaSeek 场景定制的 OpenClaw 桌面端应用。用户下载安装后，不需要自己准备 Node.js、Git 或 OpenClaw 环境，只需要在应用里填写模型 API Key 和模型名称，就可以通过 BajaSeek Bot 连接使用。
 
 ## 下载
 
 请到 GitHub Releases 下载最新版 Windows 安装包：
 
-- 安装包：`bajo-claw-1.0.1-win-x64.exe`
+- 安装包：`baja-claw-1.0.2-win-x64.exe`
 - 系统：Windows 10 / Windows 11，64 位
 - 推荐安装方式：双击安装包，按提示完成安装
 
 发布页地址：
 
-https://github.com/cyf1124906008-ai/bajo-claw/releases
+https://github.com/cyf1124906008-ai/baja-claw/releases
 
 ## 内置内容
 
-- Bajo Claw 桌面界面
+- BajaClaw 桌面界面
 - OpenClaw 主体运行环境
 - Windows 版 Node.js 运行时
 - uv 运行时
@@ -27,8 +27,8 @@ https://github.com/cyf1124906008-ai/bajo-claw/releases
 
 ## 快速开始
 
-1. 下载并安装 `bajo-claw-1.0.1-win-x64.exe`。
-2. 打开 Bajo Claw。
+1. 下载并安装 `baja-claw-1.0.2-win-x64.exe`。
+2. 打开 BajaClaw。
 3. 进入「模型」页面，点击「添加提供商」。
 4. 填写模型信息：
    - 基础 URL：默认 `https://platform.shuyanai.com/v1`
@@ -48,7 +48,7 @@ https://shuyanai.com?promoter_code=cw9rju23
 
 ## BajaSeek Bot 连接
 
-Bajo Claw 内置 BajaSeek 插件，频道页面只保留 BajaSeek 连接入口。默认连接地址为：
+BajaClaw 内置 BajaSeek 插件，频道页面只保留 BajaSeek 连接入口。默认连接地址为：
 
 ```text
 wss://ws.bajoseek.com
@@ -63,7 +63,7 @@ wss://ws.bajoseek.com
 
 ### 1. 需要提前安装 OpenClaw 吗？
 
-不需要。Bajo Claw 安装包已经内置 OpenClaw 主体和运行所需环境。
+不需要。BajaClaw 安装包已经内置 OpenClaw 主体和运行所需环境。
 
 ### 2. 需要提前安装 Node.js 或 Git 吗？
 
@@ -103,7 +103,7 @@ https://clawd.org.cn/
 
 ## 技术说明
 
-Bajo Claw 基于 OpenClaw 进行桌面端定制，面向 BajaSeek 场景重新封装了交互、模型配置、频道配置、插件内置和安装体验。
+BajaClaw 基于 OpenClaw 进行桌面端定制，面向 BajaSeek 场景重新封装了交互、模型配置、频道配置、插件内置和安装体验。
 
 插件仓库：
 

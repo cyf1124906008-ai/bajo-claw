@@ -55,10 +55,10 @@ function WindowsTitleBar() {
     <div className="drag-region bajo-titlebar flex h-11 shrink-0 items-center justify-between border-b border-black/10 dark:border-white/10">
       <div className="flex min-w-0 items-center gap-3 px-4">
         <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-white/70 shadow-sm ring-1 ring-black/10 dark:bg-white/10 dark:ring-white/10">
-          <img src={logoPng} alt="Bajo Claw" className="h-4 w-4 dark:invert" />
+          <img src={logoPng} alt="BajaClaw" className="h-4 w-4 dark:invert" />
         </div>
         <div className="flex min-w-0 items-center gap-2">
-          <span className="truncate text-[13px] font-semibold text-foreground">Bajo Claw</span>
+          <span className="truncate text-[13px] font-semibold text-foreground">BajaClaw</span>
           <span className="hidden h-4 w-px bg-black/15 dark:bg-white/15 sm:block" />
           <span className="hidden text-[12px] font-medium text-foreground/60 sm:inline">BajaSeek 桌面工作台</span>
         </div>

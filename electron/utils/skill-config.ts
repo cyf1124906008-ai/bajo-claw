@@ -1,6 +1,6 @@
 /**
  * Skill Config Utilities
- * Direct read/write access to skill configuration in Bajo Claw's isolated OpenClaw config
+ * Direct read/write access to skill configuration in BajaClaw's isolated OpenClaw config
  * This bypasses the Gateway RPC for faster and more reliable config updates.
  *
  * All file I/O uses async fs/promises to avoid blocking the main thread.
@@ -213,7 +213,7 @@ function resolveLocalSkillSourceDir(slug: string): string | null {
 }
 
 /**
- * Ensure Bajo local skills are deployed to the isolated OpenClaw skills directory.
+ * Ensure Baja local skills are deployed to the isolated OpenClaw skills directory.
  * These skills do not require per-skill API keys; they rely on the user's global model provider.
  * Runs at app startup; all errors are logged and swallowed so they never
  * block the normal startup flow.
@@ -232,7 +232,7 @@ export async function ensureBuiltinSkillsInstalled(): Promise<void> {
         let marker: LocalSkillMarker | null = null;
 
         if (!sourceDir) {
-            logger.warn(`Bajo local skill source not found, skipping: ${slug}`);
+            logger.warn(`Baja local skill source not found, skipping: ${slug}`);
             continue;
         }
 
@@ -243,7 +243,7 @@ export async function ensureBuiltinSkillsInstalled(): Promise<void> {
                     try {
                         await rm(targetDir, { recursive: true, force: true });
                     } catch (error) {
-                        logger.warn(`Failed to remove old Bajo local skill ${slug}:`, error);
+                        logger.warn(`Failed to remove old Baja local skill ${slug}:`, error);
                         continue;
                     }
                 } else {
@@ -271,9 +271,9 @@ export async function ensureBuiltinSkillsInstalled(): Promise<void> {
             if (spec.autoEnable) {
                 toEnable.push(slug);
             }
-            logger.info(`Installed Bajo local skill: ${slug} -> ${targetDir}`);
+            logger.info(`Installed Baja local skill: ${slug} -> ${targetDir}`);
         } catch (error) {
-            logger.warn(`Failed to install Bajo local skill ${slug}:`, error);
+            logger.warn(`Failed to install Baja local skill ${slug}:`, error);
         }
     }
 
@@ -281,7 +281,7 @@ export async function ensureBuiltinSkillsInstalled(): Promise<void> {
         try {
             await setSkillsEnabled(Array.from(new Set(toEnable)), true);
         } catch (error) {
-            logger.warn('Failed to auto-enable Bajo local skills:', error);
+            logger.warn('Failed to auto-enable Baja local skills:', error);
         }
     }
 }
@@ -378,7 +378,7 @@ async function tryReadMarker(markerPath: string): Promise<PreinstalledMarker | n
 
 /**
  * Ensure third-party preinstalled skills (bundled in app resources) are
- * deployed to Bajo Claw's isolated OpenClaw skills directory as full directories.
+ * deployed to BajaClaw's isolated OpenClaw skills directory as full directories.
  *
  * Policy:
  * - If skill is missing locally, install it.

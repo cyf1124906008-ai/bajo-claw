@@ -707,7 +707,7 @@ export function createGatewayWsTransportInvoker(options: GatewayWsTransportOptio
         maxProtocol: 3,
         client: {
           id: 'openclaw-control-ui',
-          displayName: 'Bajo Claw UI',
+          displayName: 'BajaClaw UI',
           version: '1.0.0',
           platform: window.electron?.platform ?? 'unknown',
           mode: 'webchat',

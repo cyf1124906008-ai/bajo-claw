@@ -254,11 +254,11 @@ export function Sidebar() {
         {!sidebarCollapsed && (
           <div className="flex min-w-0 items-center gap-3 overflow-hidden">
             <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-white/75 shadow-sm ring-1 ring-black/10 dark:bg-white/10 dark:ring-white/10">
-              <img src={logoPng} alt="Bajo Claw" className="h-5 w-5 dark:invert" />
+              <img src={logoPng} alt="BajaClaw" className="h-5 w-5 dark:invert" />
             </div>
             <div className="min-w-0">
               <span className="block truncate whitespace-nowrap text-[14px] font-bold text-foreground">
-                Bajo Claw
+                BajaClaw
               </span>
               <span className="block truncate text-[11px] font-medium text-foreground/55">
                 BajaSeek 智能连接端

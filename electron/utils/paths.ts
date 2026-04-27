@@ -27,7 +27,7 @@ function getElectronApp() {
   const fallbackUserData =
     process.env.BAJO_CLAW_USER_DATA_DIR?.trim()
     || process.env.CLAWX_USER_DATA_DIR?.trim()
-    || join(homedir(), '.bajo-claw');
+    || join(homedir(), '.baja-claw');
   const fallbackAppPath = process.cwd();
   const fallbackApp: ElectronAppLike = {
     isPackaged: false,
@@ -53,7 +53,7 @@ export function expandPath(path: string): string {
 /**
  * Get the isolated home directory used by the embedded OpenClaw runtime.
  *
- * Keeping this under Bajo Claw's userData directory prevents Bajo Claw from
+ * Keeping this under BajaClaw's userData directory prevents BajaClaw from
  * reading or mutating a user's existing ClawX/OpenClaw configuration.
  */
 export function getOpenClawHomeDir(): string {
@@ -77,7 +77,7 @@ export function getOpenClawSkillsDir(): string {
 }
 
 /**
- * Get Bajo Claw config directory
+ * Get BajaClaw config directory
  */
 export function getClawXConfigDir(): string {
   return join(getDataDir(), 'config');

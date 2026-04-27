@@ -6,13 +6,13 @@ import { withConfigLock } from './config-mutex';
 interface SyncProxyOptions {
   /**
    * When true, keep an existing channels.telegram.proxy value if proxy is
-   * currently disabled in Bajo Claw settings.
+   * currently disabled in BajaClaw settings.
    */
   preserveExistingWhenDisabled?: boolean;
 }
 
 /**
- * Sync Bajo Claw global proxy settings into OpenClaw channel config where the
+ * Sync BajaClaw global proxy settings into OpenClaw channel config where the
  * upstream runtime expects an explicit per-channel proxy knob.
  */
 export async function syncProxyConfigToOpenClaw(
@@ -35,7 +35,7 @@ export async function syncProxyConfigToOpenClaw(
     const currentProxy = typeof telegramConfig.proxy === 'string' ? telegramConfig.proxy : '';
 
     if (!settings.proxyEnabled && preserveExistingWhenDisabled && currentProxy) {
-      logger.info('Skipped Telegram proxy sync because Bajo Claw proxy is disabled and preserve mode is enabled');
+      logger.info('Skipped Telegram proxy sync because BajaClaw proxy is disabled and preserve mode is enabled');
       return;
     }
 

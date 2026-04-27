@@ -1,7 +1,7 @@
 {
   "steps": {
     "welcome": {
-      "title": "欢迎使用 Bajo Claw",
+      "title": "欢迎使用 BajaClaw",
       "description": "您的 AI 助手已准备好进行配置"
     },
     "runtime": {
@@ -22,12 +22,12 @@
     },
     "complete": {
       "title": "准备就绪！",
-      "description": "Bajo Claw 已准备好使用"
+      "description": "BajaClaw 已准备好使用"
     }
   },
   "welcome": {
-    "title": "欢迎使用 Bajo Claw",
-    "description": "Bajo Claw 内置 OpenClaw 与 BajaSeek 连接能力，安装后配置模型和 Bot 即可使用。",
+    "title": "欢迎使用 BajaClaw",
+    "description": "BajaClaw 内置 OpenClaw 与 BajaSeek 连接能力，安装后配置模型和 Bot 即可使用。",
     "features": {
       "noCommand": "无需命令行",
       "modernUI": "现代美观的界面",
@@ -113,7 +113,7 @@
   },
   "complete": {
     "title": "设置完成！",
-    "subtitle": "Bajo Claw 已准备就绪。请在模型页面填写 API Key 和模型名称，然后在频道页面连接 BajaSeek Bot。",
+    "subtitle": "BajaClaw 已准备就绪。请在模型页面填写 API Key 和模型名称，然后在频道页面连接 BajaSeek Bot。",
     "provider": "AI 提供商",
     "components": "内置组件",
     "componentsReady": "OpenClaw / BajaSeek 已内置",

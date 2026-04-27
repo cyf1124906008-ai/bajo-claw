@@ -129,7 +129,7 @@ function resolveStoredChannelType(channelType: string): string {
     return toOpenClawChannelType(channelType);
 }
 
-export function isBajoSupportedChannelType(channelType: string): boolean {
+export function isBajaSupportedChannelType(channelType: string): boolean {
     return BAJO_SUPPORTED_CHANNEL_IDS.has(resolveStoredChannelType(channelType));
 }
 
@@ -764,8 +764,8 @@ export async function saveChannelConfig(
 ): Promise<void> {
     return withConfigLock(async () => {
         const resolvedChannelType = resolveStoredChannelType(channelType);
-        if (!isBajoSupportedChannelType(resolvedChannelType)) {
-            throw new Error(`Channel "${channelType}" is not supported by Bajo Claw. Supported channels: BajaSeek, WeChat.`);
+        if (!isBajaSupportedChannelType(resolvedChannelType)) {
+            throw new Error(`Channel "${channelType}" is not supported by BajaClaw. Supported channels: BajaSeek, WeChat.`);
         }
         const currentConfig = await readOpenClawConfig();
         const resolvedAccountId = accountId || DEFAULT_ACCOUNT_ID;
@@ -866,7 +866,7 @@ export async function saveChannelConfig(
 
 export async function getChannelConfig(channelType: string, accountId?: string): Promise<ChannelConfigData | undefined> {
     const resolvedChannelType = resolveStoredChannelType(channelType);
-    if (!isBajoSupportedChannelType(resolvedChannelType)) return undefined;
+    if (!isBajaSupportedChannelType(resolvedChannelType)) return undefined;
     const config = await readOpenClawConfig();
     const channelSection = config.channels?.[resolvedChannelType];
     if (!channelSection) return undefined;
@@ -1085,7 +1085,7 @@ export async function listConfiguredChannelsFromConfig(config: OpenClawConfig): 
 
     if (config.channels) {
         for (const channelType of Object.keys(config.channels)) {
-            if (!isBajoSupportedChannelType(channelType)) continue;
+            if (!isBajaSupportedChannelType(channelType)) continue;
             const section = config.channels[channelType];
             if (section.enabled === false) continue;
             if (channelHasAnyAccount(section) || Object.keys(section).length > 0) {
@@ -1115,7 +1115,7 @@ export function listConfiguredChannelAccountsFromConfig(config: OpenClawConfig):
     }
 
     for (const [channelType, section] of Object.entries(config.channels)) {
-        if (!isBajoSupportedChannelType(channelType)) continue;
+        if (!isBajaSupportedChannelType(channelType)) continue;
         if (!section || section.enabled === false) continue;
 
         const accounts = getChannelAccountsMap(section);
@@ -1165,8 +1165,8 @@ export async function listConfiguredChannelAccounts(): Promise<Record<string, Co
 export async function setChannelDefaultAccount(channelType: string, accountId: string): Promise<void> {
     return withConfigLock(async () => {
         const resolvedChannelType = resolveStoredChannelType(channelType);
-        if (!isBajoSupportedChannelType(resolvedChannelType)) {
-            throw new Error(`Channel "${channelType}" is not supported by Bajo Claw. Supported channels: BajaSeek, WeChat.`);
+        if (!isBajaSupportedChannelType(resolvedChannelType)) {
+            throw new Error(`Channel "${channelType}" is not supported by BajaClaw. Supported channels: BajaSeek, WeChat.`);
         }
         const trimmedAccountId = accountId.trim();
         if (!trimmedAccountId) {
@@ -1264,8 +1264,8 @@ export async function deleteAgentChannelAccounts(agentId: string, ownedChannelAc
 export async function setChannelEnabled(channelType: string, enabled: boolean): Promise<void> {
     return withConfigLock(async () => {
         const resolvedChannelType = resolveStoredChannelType(channelType);
-        if (!isBajoSupportedChannelType(resolvedChannelType)) {
-            throw new Error(`Channel "${channelType}" is not supported by Bajo Claw. Supported channels: BajaSeek, WeChat.`);
+        if (!isBajaSupportedChannelType(resolvedChannelType)) {
+            throw new Error(`Channel "${channelType}" is not supported by BajaClaw. Supported channels: BajaSeek, WeChat.`);
         }
         const currentConfig = await readOpenClawConfig();
         cleanupLegacyBuiltInChannelPluginRegistration(currentConfig, resolvedChannelType);

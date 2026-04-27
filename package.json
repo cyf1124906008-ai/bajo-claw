@@ -1,6 +1,6 @@
 {
-    "name": "bajo-claw",
-    "version": "1.0.1",
+    "name": "baja-claw",
+    "version": "1.0.2",
     "pnpm": {
         "onlyBuiltDependencies": [
             "@discordjs/opus",
@@ -26,17 +26,17 @@
             ]
         }
     },
-    "description": "Bajo Claw - desktop AI assistant based on OpenClaw",
+    "description": "BajaClaw - desktop AI assistant based on OpenClaw",
     "main": "dist-electron/main/index.js",
     "author": "bajoseek",
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "https://github.com/cyf1124906008-ai/bajo-claw.git"
+        "url": "https://github.com/cyf1124906008-ai/baja-claw.git"
     },
-    "homepage": "https://github.com/cyf1124906008-ai/bajo-claw",
+    "homepage": "https://github.com/cyf1124906008-ai/baja-claw",
     "bugs": {
-        "url": "https://github.com/cyf1124906008-ai/bajo-claw/issues"
+        "url": "https://github.com/cyf1124906008-ai/baja-claw/issues"
     },
     "private": true,
     "scripts": {

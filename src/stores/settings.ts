@@ -178,7 +178,7 @@ export const useSettingsStore = create<SettingsState>()(
       resetSettings: () => set(defaultSettings),
     }),
     {
-      name: 'bajo-claw-settings',
+      name: 'baja-claw-settings',
     }
   )
 );

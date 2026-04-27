@@ -124,7 +124,7 @@ export const CHANNEL_NAMES: Record<ChannelType, string> = {
 
 export const BAJO_SUPPORTED_CHANNELS: ChannelType[] = ['bajoseek'];
 
-export function isBajoSupportedChannel(type: string): type is ChannelType {
+export function isBajaSupportedChannel(type: string): type is ChannelType {
   return BAJO_SUPPORTED_CHANNELS.includes(type as ChannelType);
 }
 

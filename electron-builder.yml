@@ -1,8 +1,8 @@
-appId: app.bajo-claw.desktop
-productName: Bajo Claw
+appId: app.baja-claw.desktop
+productName: BajaClaw
 copyright: Copyright 2026 bajoseek
 compression: maximum
-artifactName: bajo-claw-${version}-${os}-${arch}.${ext}
+artifactName: baja-claw-${version}-${os}-${arch}.${ext}
 
 directories:
   output: release
@@ -51,12 +51,12 @@ asarUnpack:
 npmRebuild: false
 
 # Auto-update configuration
-# Bajo Claw must not use the upstream OSS feed. Keep updates tied to
-# the Bajo release repository so users never see unrelated versions or downgrades.
+# BajaClaw must not use the upstream OSS feed. Keep updates tied to
+# the Baja release repository so users never see unrelated versions or downgrades.
 publish:
   - provider: github
     owner: cyf1124906008-ai
-    repo: bajo-claw
+    repo: baja-claw
 
 # macOS Configuration
 mac:
@@ -83,8 +83,8 @@ mac:
   entitlementsInherit: entitlements.mac.plist
   notarize: true
   extendInfo:
-    NSMicrophoneUsageDescription: Bajo Claw requires microphone access for voice features
-    NSCameraUsageDescription: Bajo Claw requires camera access for video features
+    NSMicrophoneUsageDescription: BajaClaw requires microphone access for voice features
+    NSCameraUsageDescription: BajaClaw requires camera access for video features
 
 dmg:
   # Explicit volume size prevents dmg-builder@1.2.0 auto-calculation from
@@ -130,8 +130,8 @@ nsis:
   differentialPackage: true
   createDesktopShortcut: true
   createStartMenuShortcut: true
-  shortcutName: Bajo Claw
-  uninstallDisplayName: Bajo Claw
+  shortcutName: BajaClaw
+  uninstallDisplayName: BajaClaw
   license: LICENSE
   include: scripts/installer.nsh
   installerIcon: resources/icons/icon.ico
@@ -161,14 +161,14 @@ linux:
   maintainer: bajoseek
   vendor: bajoseek
   synopsis: AI Assistant powered by OpenClaw
-  description: Bajo Claw is a desktop AI assistant application that integrates with OpenClaw Gateway and BajaSeek.
+  description: BajaClaw is a desktop AI assistant application that integrates with OpenClaw Gateway and BajaSeek.
   desktop:
     entry:
-      Name: Bajo Claw
+      Name: BajaClaw
       Comment: AI Assistant powered by OpenClaw
       Categories: Utility;Network;
       Keywords: ai;assistant;automation;chat;
-      StartupWMClass: bajo-claw
+      StartupWMClass: baja-claw
 
 appImage:
   license: LICENSE

@@ -68,7 +68,7 @@ interface DefaultSkill {
 }
 
 // NOTE: Channel types moved to Settings > Channels page
-// NOTE: Bajo Claw bundles OpenClaw and the BajaSeek integration; first run must stay offline-safe.
+// NOTE: BajaClaw bundles OpenClaw and the BajaSeek integration; first run must stay offline-safe.
 
 export function Setup() {
   const { t } = useTranslation(['setup', 'channels']);
@@ -224,7 +224,7 @@ function WelcomeContent() {
   return (
     <div data-testid="setup-welcome-step" className="text-center space-y-4">
       <div className="mb-4 flex justify-center">
-        <img src={bajoClawIcon} alt="Bajo Claw" className="h-16 w-16" />
+        <img src={bajoClawIcon} alt="BajaClaw" className="h-16 w-16" />
       </div>
       <h2 className="text-xl font-semibold">{t('welcome.title')}</h2>
       <p className="text-muted-foreground">

@@ -1,4 +1,4 @@
-# Bajo Claw 使用教程
+# BajaClaw 使用教程
 
 本文面向普通用户，说明如何下载、安装、配置模型，以及如何连接 BajaSeek Bot。
 
@@ -6,19 +6,19 @@
 
 1. 打开下载页：
 
-   https://github.com/cyf1124906008-ai/bajo-claw/releases
+   https://github.com/cyf1124906008-ai/baja-claw/releases
 
 2. 下载最新版安装包：
 
-   `bajo-claw-1.0.1-win-x64.exe`
+   `baja-claw-1.0.2-win-x64.exe`
 
 3. 双击安装包。
 4. 根据安装向导完成安装。
-5. 安装完成后，从桌面或开始菜单打开 `Bajo Claw`。
+5. 安装完成后，从桌面或开始菜单打开 `BajaClaw`。
 
 ## 2. 第一次打开
 
-第一次启动时，Bajo Claw 会自动准备 OpenClaw 所需环境。普通用户不需要手动安装：
+第一次启动时，BajaClaw 会自动准备 OpenClaw 所需环境。普通用户不需要手动安装：
 
 - OpenClaw
 - Node.js
@@ -72,11 +72,11 @@ wss://ws.bajoseek.com
 
 ## 5. 使用 BajaSeek 发送消息
 
-模型和 BajaSeek 频道都配置完成后，就可以在 BajaSeek Bot 中发送消息。Bajo Claw 会通过内置 OpenClaw 接收任务、调用模型、执行技能，并把结果返回到 BajaSeek。
+模型和 BajaSeek 频道都配置完成后，就可以在 BajaSeek Bot 中发送消息。BajaClaw 会通过内置 OpenClaw 接收任务、调用模型、执行技能，并把结果返回到 BajaSeek。
 
 ## 6. 技能使用
 
-Bajo Claw 已内置一批常用技能，并加入了适合中国市场的投资和 A 股相关技能。用户可以在「技能」页面查看和启用。
+BajaClaw 已内置一批常用技能，并加入了适合中国市场的投资和 A 股相关技能。用户可以在「技能」页面查看和启用。
 
 如果需要安装更多技能：
 
@@ -117,4 +117,4 @@ https://clawd.org.cn/
 
 ## 8. 卸载
 
-可以通过 Windows「设置 - 应用」卸载 `Bajo Claw`。卸载不会自动删除用户数据目录，如果需要完全清理，请手动删除应用提示的数据目录。
+可以通过 Windows「设置 - 应用」卸载 `BajaClaw`。卸载不会自动删除用户数据目录，如果需要完全清理，请手动删除应用提示的数据目录。

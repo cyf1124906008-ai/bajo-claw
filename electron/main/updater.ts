@@ -3,7 +3,7 @@
  * Handles automatic application updates using electron-updater
  *
  * Update providers are configured in electron-builder.yml.
- * Bajo Claw intentionally avoids the legacy ClawX OSS feed so packaged builds
+ * BajaClaw intentionally avoids the legacy ClawX OSS feed so packaged builds
  * never offer a ClawX version or a downgrade.
  */
 import { autoUpdater, UpdateInfo, ProgressInfo, UpdateDownloadedEvent } from 'electron-updater';
@@ -12,7 +12,7 @@ import { logger } from '../utils/logger';
 import { EventEmitter } from 'events';
 import { setQuitting } from './app-state';
 
-/** Optional Bajo Claw update feed. Disabled unless explicitly configured. */
+/** Optional BajaClaw update feed. Disabled unless explicitly configured. */
 const BAJO_UPDATE_FEED_URL = process.env.BAJO_CLAW_UPDATE_FEED_URL?.trim() || '';
 const BAJO_UPDATES_ENABLED = process.env.BAJO_CLAW_ENABLE_UPDATES === '1' && BAJO_UPDATE_FEED_URL.length > 0;
 
@@ -215,7 +215,7 @@ export class AppUpdater extends EventEmitter {
   async checkForUpdates(): Promise<UpdateInfo | null> {
     try {
       if (!BAJO_UPDATES_ENABLED) {
-        logger.info('[Updater] Update checking disabled; no Bajo Claw update feed configured.');
+        logger.info('[Updater] Update checking disabled; no BajaClaw update feed configured.');
         this.updateStatus({ status: 'not-available' });
         return null;
       }

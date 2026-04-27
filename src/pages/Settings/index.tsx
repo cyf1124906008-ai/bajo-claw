@@ -478,7 +478,7 @@ export function Settings() {
         {/* Header */}
         <div className="bajo-page-header mb-8 shrink-0 px-6 py-5">
           <div>
-            <div className="bajo-page-kicker mb-2">BAJO CLAW SETTINGS</div>
+            <div className="bajo-page-kicker mb-2">BAJACLAW SETTINGS</div>
             <h1 className="mb-2 text-3xl font-bold text-foreground">
               {t('title')}
             </h1>

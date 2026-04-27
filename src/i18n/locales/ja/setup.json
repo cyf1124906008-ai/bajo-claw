@@ -1,7 +1,7 @@
 {
   "steps": {
     "welcome": {
-      "title": "Bajo Clawへようこそ",
+      "title": "BajaClawへようこそ",
       "description": "AIアシスタントの設定準備が整いました"
     },
     "runtime": {
@@ -22,12 +22,12 @@
     },
     "complete": {
       "title": "完了！",
-      "description": "Bajo Clawを使用する準備が整いました"
+      "description": "BajaClawを使用する準備が整いました"
     }
   },
   "welcome": {
-    "title": "Bajo Clawへようこそ",
-    "description": "Bajo ClawはOpenClawのグラフィカルインターフェースで、お気に入りのメッセージングプラットフォームでAIアシスタントを簡単に使用できます。",
+    "title": "BajaClawへようこそ",
+    "description": "BajaClawはOpenClawのグラフィカルインターフェースで、お気に入りのメッセージングプラットフォームでAIアシスタントを簡単に使用できます。",
     "features": {
       "noCommand": "コマンドライン不要",
       "modernUI": "モダンで美しいインターフェース",
@@ -113,7 +113,7 @@
   },
   "complete": {
     "title": "セットアップ完了！",
-    "subtitle": "Bajo Clawの構成が完了し、使用準備が整いました。AIアシスタントとのチャットを開始できます。",
+    "subtitle": "BajaClawの構成が完了し、使用準備が整いました。AIアシスタントとのチャットを開始できます。",
     "provider": "AI プロバイダー",
     "components": "コンポーネント",
     "gateway": "ゲートウェイ",

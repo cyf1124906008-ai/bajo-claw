@@ -28,7 +28,7 @@ async function ensureDir(dir: string): Promise<void> {
 // ── Pure helpers (no I/O) ────────────────────────────────────────
 
 /**
- * Merge a Bajo Claw context section into an existing file's content.
+ * Merge a BajaClaw context section into an existing file's content.
  * If markers already exist, replaces the section in-place.
  * Otherwise appends it at the end.
  */
@@ -45,7 +45,7 @@ export function mergeClawXSection(existing: string, section: string): string {
 /**
  * Strip the "## First Run" section from workspace AGENTS.md content.
  * This section is seeded by the OpenClaw Gateway but is unnecessary
- * for Bajo Claw-managed workspaces.  Removes everything from the heading
+ * for BajaClaw-managed workspaces.  Removes everything from the heading
  * line until the next markdown heading (any level) or end of content.
  */
 export function stripFirstRunSection(content: string): string {
@@ -153,7 +153,7 @@ async function resolveAllWorkspaceDirs(): Promise<string[]> {
 // ── Bootstrap file repair ────────────────────────────────────────
 
 /**
- * Detect and remove bootstrap .md files that contain only Bajo Claw markers
+ * Detect and remove bootstrap .md files that contain only BajaClaw markers
  * with no meaningful OpenClaw content outside them.
  */
 export async function repairClawXOnlyBootstrapFiles(): Promise<void> {
@@ -185,9 +185,9 @@ export async function repairClawXOnlyBootstrapFiles(): Promise<void> {
       if (before === '' && after === '') {
         try {
           await unlink(filePath);
-          logger.info(`Removed Bajo Claw-only bootstrap file for re-seeding: ${file} (${workspaceDir})`);
+          logger.info(`Removed BajaClaw-only bootstrap file for re-seeding: ${file} (${workspaceDir})`);
         } catch {
-          logger.warn(`Failed to remove Bajo Claw-only bootstrap file: ${filePath}`);
+          logger.warn(`Failed to remove BajaClaw-only bootstrap file: ${filePath}`);
         }
       }
     }
@@ -195,7 +195,7 @@ export async function repairClawXOnlyBootstrapFiles(): Promise<void> {
 }
 
 /**
- * Bajo Claw ships a default desktop identity and does not need OpenClaw's
+ * BajaClaw ships a default desktop identity and does not need OpenClaw's
  * chat-first personalization script. Once the Gateway has seeded the regular
  * workspace files, remove BOOTSTRAP.md so sessions start normally.
  */
@@ -207,7 +207,7 @@ export async function removeChatFirstBootstrapFiles(): Promise<void> {
 
     try {
       await unlink(bootstrapPath);
-      logger.info(`Removed chat-first bootstrap file from Bajo Claw workspace (${workspaceDir})`);
+      logger.info(`Removed chat-first bootstrap file from BajaClaw workspace (${workspaceDir})`);
     } catch {
       logger.warn(`Failed to remove chat-first bootstrap file: ${bootstrapPath}`);
     }
@@ -217,14 +217,14 @@ export async function removeChatFirstBootstrapFiles(): Promise<void> {
 // ── Context merging ──────────────────────────────────────────────
 
 /**
- * Merge Bajo Claw context snippets into workspace bootstrap files that
+ * Merge BajaClaw context snippets into workspace bootstrap files that
  * already exist on disk.  Returns the number of target files that were
  * skipped because they don't exist yet.
  */
 async function mergeClawXContextOnce(): Promise<number> {
   const contextDir = join(getResourcesDir(), 'context');
   if (!(await fileExists(contextDir))) {
-    logger.debug('Bajo Claw context directory not found, skipping context merge');
+    logger.debug('BajaClaw context directory not found, skipping context merge');
     return 0;
   }
 
@@ -269,7 +269,7 @@ async function mergeClawXContextOnce(): Promise<number> {
       // First Run stripping happened and the ClawX section stayed identical.
       if (merged !== originalExisting) {
         await writeFile(targetPath, merged, 'utf-8');
-        logger.info(`Merged Bajo Claw context into ${targetName} (${workspaceDir})`);
+        logger.info(`Merged BajaClaw context into ${targetName} (${workspaceDir})`);
       }
     }
   }
@@ -281,7 +281,7 @@ const RETRY_INTERVAL_MS = 2000;
 const MAX_RETRIES = 15;
 
 /**
- * Ensure Bajo Claw context snippets are merged into the openclaw workspace
+ * Ensure BajaClaw context snippets are merged into the openclaw workspace
  * bootstrap files.
  */
 export async function ensureClawXContext(): Promise<void> {
@@ -296,12 +296,12 @@ export async function ensureClawXContext(): Promise<void> {
     skipped = await mergeClawXContextOnce();
     if (skipped === 0) {
       await removeChatFirstBootstrapFiles();
-      logger.info(`Bajo Claw context merge completed after ${attempt} retry(ies)`);
+      logger.info(`BajaClaw context merge completed after ${attempt} retry(ies)`);
       return;
     }
-    logger.debug(`Bajo Claw context merge: ${skipped} file(s) still missing (retry ${attempt}/${MAX_RETRIES})`);
+    logger.debug(`BajaClaw context merge: ${skipped} file(s) still missing (retry ${attempt}/${MAX_RETRIES})`);
   }
 
-  logger.warn(`Bajo Claw context merge: ${skipped} file(s) still missing after ${MAX_RETRIES} retries`);
+  logger.warn(`BajaClaw context merge: ${skipped} file(s) still missing after ${MAX_RETRIES} retries`);
   await removeChatFirstBootstrapFiles();
 }
